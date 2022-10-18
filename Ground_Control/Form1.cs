@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
-using AForge.Video;
 using rtChart;
-using System.Threading;
 
 namespace Ground_Control
 {
@@ -27,8 +19,6 @@ namespace Ground_Control
         public delegate void dataDelegate(string tData);
 
         kayChart serial_data_chart;
-
-        MJPEGStream video_stream;
 
         public Form1()
         {

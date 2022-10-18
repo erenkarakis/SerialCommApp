@@ -1,15 +1,7 @@
 ﻿using AForge.Video;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using AForge.Video;
 
 namespace Ground_Control
 {
@@ -57,11 +49,18 @@ namespace Ground_Control
         {
             if (!isVideoConnected)
             {
-                string cam_address = txtbox_cam_address.Text.ToString();
-                ShowStreamVideo(cam_address);
+                try
+                {
+                    string cam_address = txtbox_cam_address.Text.ToString();
+                    ShowStreamVideo(cam_address);
 
-                video_stream.Start();
-
+                    video_stream.Start();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message.ToString(), "Link Error");
+                }
+                
                 isVideoConnected = true;
                 btn_connectVideo.Text = "Disconnect";
                 btn_connectVideo.BackColor = Color.Coral;
