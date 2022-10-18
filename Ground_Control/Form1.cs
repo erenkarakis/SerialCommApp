@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using AForge.Video;
 using rtChart;
-using Ground_Control.Classes;
 using System.Threading;
 
 namespace Ground_Control
