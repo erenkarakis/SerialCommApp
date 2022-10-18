@@ -148,34 +148,6 @@ namespace Ground_Control
                 }
             }
 
-        private void GetNewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            try
-            {
-                Bitmap bmap = (Bitmap)eventArgs.Frame.Clone();
-                video_panel.Image = bmap;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("VIDEO ERROR: " + e.Message);
-            }
-
-        }
-
-        private void ShowStreamVideo(string CAM_URL = "http://192.168.1.10:5000/video_feed")
-        {
-            try
-            {
-                video_stream = new MJPEGStream(CAM_URL);
-                video_stream.NewFrame += GetNewFrame;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("VIDEO ERROR: " + e.Message);
-            }
-
-        }
-
         private void DisconnectArduino()
         {
             isConnected = false;
@@ -288,6 +260,35 @@ namespace Ground_Control
                 isConnected = true;
             }
         }
+
+        private void GetNewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            try
+            {
+                Bitmap bmap = (Bitmap)eventArgs.Frame.Clone();
+                video_panel.Image = bmap;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("VIDEO ERROR: " + e.Message);
+            }
+
+        }
+
+        private void ShowStreamVideo(string CAM_URL = "http://192.168.1.10:5000/video_feed")
+        {
+            try
+            {
+                video_stream = new MJPEGStream(CAM_URL);
+                video_stream.NewFrame += GetNewFrame;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("VIDEO ERROR: " + e.Message);
+            }
+
+        }
+
         private void btn_connectVideo_Click(object sender, EventArgs e)
         {
             if (!isVideoConnected)
