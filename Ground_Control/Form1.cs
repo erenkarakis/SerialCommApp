@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO.Ports;
 using rtChart;
+using System.Collections.Generic;
+using Ground_Control.Classes;
 
 namespace Ground_Control
 {
@@ -16,9 +18,10 @@ namespace Ground_Control
         String[] baud_rates = { "4800", "9600", "14400", "19200", "38400", "57600", "115200" };
 
         public delegate void portDelegate(string sData);
-        public delegate void dataDelegate(string tData);
 
         kayChart serial_data_chart;
+
+        public List<ArduinoData> arduinoDatas;
 
         public Form1()
         {
@@ -32,6 +35,7 @@ namespace Ground_Control
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            dataGridView.DataSource = arduinoDatas; 
 
             serial_data_chart = new kayChart(data_chart1, 300);
             serial_data_chart.serieName = " ";
@@ -126,8 +130,9 @@ namespace Ground_Control
 
                 try
                 {
-                    string str = port.ReadLine();
-                    this.BeginInvoke((new portDelegate(ReceiveData)), str);
+                    string str_data = port.ReadLine();
+                    this.BeginInvoke((new portDelegate(ReceiveData)), str_data);
+                    
 
                 }
                 catch (Exception ex)
@@ -169,26 +174,40 @@ namespace Ground_Control
         private void ReceiveData(String sData)
         {
             string fixed_data = sData.Replace(".", ",");
-            string[] data = fixed_data.Split('*');
+            string[] splitted_data = fixed_data.Split('*');
+
+            double bat_value = 0D;
+
+            //string fixed_data = sData.Replace(".", ",");
             //UpdateCPBValues(sData);
             //Console.WriteLine(Double.Parse(fixed_data));
-            
+
+            Console.WriteLine(splitted_data.Length);
+
+
             try
             {
-                Battery(Double.Parse(fixed_data));
-                serial_data_chart.TriggeredUpdate(Double.Parse(fixed_data));
+                bat_value = Double.Parse(splitted_data[0]);
+                Battery(bat_value);
+                serial_data_chart.TriggeredUpdate(bat_value);
             }
             catch (Exception e)
             {
                 Console.WriteLine("DATA CHART PARSE ERROR: " + e.Message);
             }
 
-            /*if (data.Length == 4)
+
+            ArduinoData d = new ArduinoData()
             {
-                txt_angleX.Text = data[1];
-                txt_angleY.Text = data[2];
-                txt_angleZ.Text = data[3];
-            }*/
+                Battery = bat_value,
+                Altitude = Int32.Parse(splitted_data[1]),
+                Latitude = Double.Parse(splitted_data[2]),
+                Longitude = Double.Parse(splitted_data[3]),
+                Humidity = Int32.Parse(splitted_data[4]),
+                Temperature = Double.Parse(splitted_data[5])
+            };
+
+            //arduinoDatas.Add(d);
         }
 
         public void ReturnDefault()
