@@ -125,14 +125,12 @@ namespace Ground_Control
 
         private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
             {
-                port.ReadTimeout = 20;
-
+                
                 try
                 {
+                    port.ReadTimeout = 2000;
                     string str_data = port.ReadLine();
                     this.BeginInvoke((new portDelegate(ReceiveData)), str_data);
-                    
-
                 }
                 catch (Exception ex)
                 {
