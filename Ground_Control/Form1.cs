@@ -206,7 +206,7 @@ namespace Ground_Control
                 Temperature = Double.Parse(splitted_data[5])
             };
 
-            arduinoDatas.Add(d);
+            arduinoDatas.Insert(0, d);
 
             dataGridView.DataSource = null;
             dataGridView.Rows.Clear();
