@@ -40,8 +40,6 @@ namespace Ground_Control
 
             serial_data_chart = new kayChart(data_chart1, 300);
             serial_data_chart.serieName = " ";
-
-            Battery(7.4D);
         }
 
         void Battery(double bat_voltage = 7.3, double bat_max_voltage = 7.4, double bat_min_voltage = 6.0)
