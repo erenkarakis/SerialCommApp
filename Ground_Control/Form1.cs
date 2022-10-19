@@ -5,6 +5,7 @@ using System.IO.Ports;
 using rtChart;
 using System.Collections.Generic;
 using Ground_Control.Classes;
+using System.Linq;
 
 namespace Ground_Control
 {
@@ -35,7 +36,7 @@ namespace Ground_Control
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView.DataSource = arduinoDatas; 
+            arduinoDatas = new List<ArduinoData>();
 
             serial_data_chart = new kayChart(data_chart1, 300);
             serial_data_chart.serieName = " ";
@@ -207,7 +208,10 @@ namespace Ground_Control
                 Temperature = Double.Parse(splitted_data[5])
             };
 
-            //arduinoDatas.Add(d);
+            arduinoDatas.Add(d);
+            dataGridView.DataSource = arduinoDatas;
+
+            Console.WriteLine(arduinoDatas);
         }
 
         public void ReturnDefault()
