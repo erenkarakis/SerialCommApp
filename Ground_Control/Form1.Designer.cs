@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_bat_percent = new System.Windows.Forms.Label();
@@ -76,9 +76,12 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(930, 46);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(954, 299);
@@ -333,56 +336,56 @@
             // 
             // data_chart1
             // 
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.Name = "ChartArea1";
-            this.data_chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.data_chart1.Legends.Add(legend3);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea1.Name = "ChartArea1";
+            this.data_chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.data_chart1.Legends.Add(legend1);
             this.data_chart1.Location = new System.Drawing.Point(1234, 353);
             this.data_chart1.Name = "data_chart1";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Color = System.Drawing.Color.DodgerBlue;
-            series3.Legend = "Legend1";
-            series3.Name = " ";
-            this.data_chart1.Series.Add(series3);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.DodgerBlue;
+            series1.Legend = "Legend1";
+            series1.Name = " ";
+            this.data_chart1.Series.Add(series1);
             this.data_chart1.Size = new System.Drawing.Size(650, 250);
             this.data_chart1.TabIndex = 30;
             this.data_chart1.Text = "chart1";
             // 
             // data_chart2
             // 
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.Name = "ChartArea1";
-            this.data_chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.data_chart2.Legends.Add(legend4);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea2.Name = "ChartArea1";
+            this.data_chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.data_chart2.Legends.Add(legend2);
             this.data_chart2.Location = new System.Drawing.Point(1234, 609);
             this.data_chart2.Name = "data_chart2";
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.DodgerBlue;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.data_chart2.Series.Add(series4);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.DodgerBlue;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.data_chart2.Series.Add(series2);
             this.data_chart2.Size = new System.Drawing.Size(650, 250);
             this.data_chart2.TabIndex = 31;
             this.data_chart2.Text = "chart2";

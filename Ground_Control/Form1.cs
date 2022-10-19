@@ -209,9 +209,14 @@ namespace Ground_Control
             };
 
             arduinoDatas.Add(d);
+
+            dataGridView.DataSource = null;
+            dataGridView.Rows.Clear();
             dataGridView.DataSource = arduinoDatas;
 
-            Console.WriteLine(arduinoDatas);
+            //dataGridView.Update();
+
+            //Console.WriteLine("ARDUINO DATAS: " + arduinoDatas.Count().ToString());
         }
 
         public void ReturnDefault()
