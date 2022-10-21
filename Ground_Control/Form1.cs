@@ -112,15 +112,16 @@ namespace Ground_Control
                 port.DataReceived += Port_DataReceived;
                 port.Open();
                 port.Write("/STRC");
+
+                isConnected = true;
+                btn_connect.Text = "Disconnect";
+                btn_connect.BackColor = Color.Coral;
+                EnableComponents();
             }
             catch (Exception e)
             {
                 Console.WriteLine("CONNECTION ERROR: " + e.Message);
             }
-
-            btn_connect.Text = "Disconnect";
-            btn_connect.BackColor = Color.Coral;
-            EnableComponents();
         }
 
         private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -151,6 +152,7 @@ namespace Ground_Control
                 Console.WriteLine("DISCONNECT ERROR: " + e.Message);
             }
 
+            isConnected = false;
             btn_connect.Text = "Connect";
             btn_connect.BackColor = Color.DodgerBlue;
             DisableComponents();
@@ -262,14 +264,11 @@ namespace Ground_Control
             if (isConnected)
             {
                 DisconnectArduino();
-                isConnected = false;
             }
 
             else if (!isConnected || port != null || combo_baudRate.Text != "")
             {
                 ConnectArduino();
-
-                isConnected = true;
             }
         }
 
