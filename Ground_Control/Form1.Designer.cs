@@ -61,6 +61,7 @@
             this.iPCamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rawDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendDataToBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_refreshPorts = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bat_level2)).BeginInit();
@@ -245,6 +246,7 @@
             // ConnectionPanel
             // 
             this.ConnectionPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ConnectionPanel.Controls.Add(this.btn_refreshPorts);
             this.ConnectionPanel.Controls.Add(this.label2);
             this.ConnectionPanel.Controls.Add(this.label1);
             this.ConnectionPanel.Controls.Add(this.combo_baudRate);
@@ -299,7 +301,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(45, 12);
+            this.label3.Location = new System.Drawing.Point(61, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 24);
             this.label3.TabIndex = 0;
@@ -327,7 +329,7 @@
             this.btn_connect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.btn_connect.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_connect.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_connect.Location = new System.Drawing.Point(70, 215);
+            this.btn_connect.Location = new System.Drawing.Point(70, 181);
             this.btn_connect.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_connect.Name = "btn_connect";
             this.btn_connect.Size = new System.Drawing.Size(160, 40);
@@ -432,6 +434,23 @@
             this.sendDataToBoardToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.sendDataToBoardToolStripMenuItem.Text = "Send Data To Board";
             // 
+            // btn_refreshPorts
+            // 
+            this.btn_refreshPorts.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_refreshPorts.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_refreshPorts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btn_refreshPorts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_refreshPorts.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_refreshPorts.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_refreshPorts.Location = new System.Drawing.Point(70, 236);
+            this.btn_refreshPorts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_refreshPorts.Name = "btn_refreshPorts";
+            this.btn_refreshPorts.Size = new System.Drawing.Size(160, 40);
+            this.btn_refreshPorts.TabIndex = 5;
+            this.btn_refreshPorts.Text = "Refresh Ports";
+            this.btn_refreshPorts.UseVisualStyleBackColor = false;
+            this.btn_refreshPorts.Click += new System.EventHandler(this.btn_refreshPorts_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,6 +516,7 @@
         private System.Windows.Forms.ToolStripMenuItem iPCamToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rawDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendDataToBoardToolStripMenuItem;
+        private System.Windows.Forms.Button btn_refreshPorts;
     }
 }
 

@@ -278,5 +278,10 @@ namespace Ground_Control
             IP_Cam ip_cam_form = new IP_Cam();
             ip_cam_form.Show();
         }
+
+        private void btn_refreshPorts_Click(object sender, EventArgs e)
+        {
+            GetAvailablePorts();
+        }
     }
 }
