@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_bat_percent = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.cpb = new CircularProgressBar.CircularProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.ConnectionPanel = new System.Windows.Forms.Panel();
+            this.btn_refreshPorts = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.combo_baudRate = new System.Windows.Forms.ComboBox();
@@ -61,7 +62,9 @@
             this.iPCamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rawDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendDataToBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_refreshPorts = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.map = new GMap.NET.WindowsForms.GMapControl();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bat_level2)).BeginInit();
@@ -73,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_chart2)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -258,6 +262,23 @@
             this.ConnectionPanel.Size = new System.Drawing.Size(300, 300);
             this.ConnectionPanel.TabIndex = 24;
             // 
+            // btn_refreshPorts
+            // 
+            this.btn_refreshPorts.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_refreshPorts.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_refreshPorts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btn_refreshPorts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btn_refreshPorts.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_refreshPorts.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_refreshPorts.Location = new System.Drawing.Point(70, 236);
+            this.btn_refreshPorts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_refreshPorts.Name = "btn_refreshPorts";
+            this.btn_refreshPorts.Size = new System.Drawing.Size(160, 40);
+            this.btn_refreshPorts.TabIndex = 5;
+            this.btn_refreshPorts.Text = "Refresh Ports";
+            this.btn_refreshPorts.UseVisualStyleBackColor = false;
+            this.btn_refreshPorts.Click += new System.EventHandler(this.btn_refreshPorts_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -340,56 +361,56 @@
             // 
             // data_chart1
             // 
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.Name = "ChartArea1";
-            this.data_chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.data_chart1.Legends.Add(legend3);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea1.Name = "ChartArea1";
+            this.data_chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.data_chart1.Legends.Add(legend1);
             this.data_chart1.Location = new System.Drawing.Point(1234, 353);
             this.data_chart1.Name = "data_chart1";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Color = System.Drawing.Color.DodgerBlue;
-            series3.Legend = "Legend1";
-            series3.Name = " ";
-            this.data_chart1.Series.Add(series3);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.DodgerBlue;
+            series1.Legend = "Legend1";
+            series1.Name = " ";
+            this.data_chart1.Series.Add(series1);
             this.data_chart1.Size = new System.Drawing.Size(650, 250);
             this.data_chart1.TabIndex = 30;
             this.data_chart1.Text = "chart1";
             // 
             // data_chart2
             // 
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.Name = "ChartArea1";
-            this.data_chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.data_chart2.Legends.Add(legend4);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea2.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea2.Name = "ChartArea1";
+            this.data_chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.data_chart2.Legends.Add(legend2);
             this.data_chart2.Location = new System.Drawing.Point(1234, 609);
             this.data_chart2.Name = "data_chart2";
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.DodgerBlue;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.data_chart2.Series.Add(series4);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.DodgerBlue;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.data_chart2.Series.Add(series2);
             this.data_chart2.Size = new System.Drawing.Size(650, 250);
             this.data_chart2.TabIndex = 31;
             this.data_chart2.Text = "chart2";
@@ -434,28 +455,59 @@
             this.sendDataToBoardToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.sendDataToBoardToolStripMenuItem.Text = "Send Data To Board";
             // 
-            // btn_refreshPorts
+            // panel3
             // 
-            this.btn_refreshPorts.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_refreshPorts.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_refreshPorts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btn_refreshPorts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btn_refreshPorts.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_refreshPorts.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_refreshPorts.Location = new System.Drawing.Point(70, 236);
-            this.btn_refreshPorts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btn_refreshPorts.Name = "btn_refreshPorts";
-            this.btn_refreshPorts.Size = new System.Drawing.Size(160, 40);
-            this.btn_refreshPorts.TabIndex = 5;
-            this.btn_refreshPorts.Text = "Refresh Ports";
-            this.btn_refreshPorts.UseVisualStyleBackColor = false;
-            this.btn_refreshPorts.Click += new System.EventHandler(this.btn_refreshPorts_Click);
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel3.Controls.Add(this.map);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(623, 351);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(600, 600);
+            this.panel3.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(278, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 24);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Map";
+            // 
+            // map
+            // 
+            this.map.Bearing = 0F;
+            this.map.CanDragMap = true;
+            this.map.EmptyTileColor = System.Drawing.Color.Navy;
+            this.map.GrayScaleMode = false;
+            this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.map.LevelsKeepInMemory = 5;
+            this.map.Location = new System.Drawing.Point(30, 51);
+            this.map.MarkersEnabled = true;
+            this.map.MaxZoom = 2;
+            this.map.MinZoom = 2;
+            this.map.MouseWheelZoomEnabled = true;
+            this.map.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.map.Name = "map";
+            this.map.NegativeMode = false;
+            this.map.PolygonsEnabled = true;
+            this.map.RetryLoadTile = 0;
+            this.map.RoutesEnabled = true;
+            this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.map.ShowTileGridLines = false;
+            this.map.Size = new System.Drawing.Size(552, 518);
+            this.map.TabIndex = 6;
+            this.map.Zoom = 0D;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1884, 911);
+            this.ClientSize = new System.Drawing.Size(1884, 961);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.data_chart2);
             this.Controls.Add(this.data_chart1);
             this.Controls.Add(this.dataGridView);
@@ -482,6 +534,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_chart2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,6 +571,9 @@
         private System.Windows.Forms.ToolStripMenuItem rawDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sendDataToBoardToolStripMenuItem;
         private System.Windows.Forms.Button btn_refreshPorts;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label7;
+        private GMap.NET.WindowsForms.GMapControl map;
     }
 }
 

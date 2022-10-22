@@ -6,6 +6,8 @@ using rtChart;
 using System.Collections.Generic;
 using Ground_Control.Classes;
 using System.Linq;
+using GMap.NET.MapProviders;
+using GMap.NET;
 
 namespace Ground_Control
 {
@@ -24,6 +26,8 @@ namespace Ground_Control
 
         public List<ArduinoData> arduinoDatas;
 
+        double lat, longt;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,6 +36,7 @@ namespace Ground_Control
             DisableComponents();
             GetAvailablePorts();
             InitCircularProgressBar();
+            InitMap();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -281,6 +286,22 @@ namespace Ground_Control
         private void btn_refreshPorts_Click(object sender, EventArgs e)
         {
             GetAvailablePorts();
+        }
+
+        public void InitMap()
+        {
+            map.MapProvider = GMapProviders.GoogleMap;
+            lat = 39.925262;
+            longt = 32.836912;
+            map.Position = new PointLatLng(lat, longt);
+            map.MinZoom = 5;
+            map.MaxZoom = 100;
+            map.Zoom = 18;
+        }
+
+        public void UpdatePositionOnMap(double latitude, double longtitude)
+        {
+            map.Position = new PointLatLng(latitude, longtitude);
         }
     }
 }
