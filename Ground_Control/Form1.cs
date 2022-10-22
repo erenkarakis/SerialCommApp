@@ -291,6 +291,7 @@ namespace Ground_Control
         public void InitMap()
         {
             map.MapProvider = GMapProviders.GoogleMap;
+            map.DragButton = MouseButtons.Left;
             lat = 39.925262;
             longt = 32.836912;
             map.Position = new PointLatLng(lat, longt);
