@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_bat_percent = new System.Windows.Forms.Label();
@@ -63,8 +63,8 @@
             this.rawDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendDataToBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.map = new GMap.NET.WindowsForms.GMapControl();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bat_level2)).BeginInit();
@@ -361,56 +361,56 @@
             // 
             // data_chart1
             // 
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea3.Name = "ChartArea1";
-            this.data_chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.data_chart1.Legends.Add(legend3);
+            chartArea9.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea9.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea9.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea9.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea9.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea9.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea9.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea9.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea9.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea9.Name = "ChartArea1";
+            this.data_chart1.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.data_chart1.Legends.Add(legend9);
             this.data_chart1.Location = new System.Drawing.Point(1234, 353);
             this.data_chart1.Name = "data_chart1";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Color = System.Drawing.Color.DodgerBlue;
-            series3.Legend = "Legend1";
-            series3.Name = " ";
-            this.data_chart1.Series.Add(series3);
+            series9.BorderWidth = 3;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series9.Color = System.Drawing.Color.DodgerBlue;
+            series9.Legend = "Legend1";
+            series9.Name = " ";
+            this.data_chart1.Series.Add(series9);
             this.data_chart1.Size = new System.Drawing.Size(650, 250);
             this.data_chart1.TabIndex = 30;
             this.data_chart1.Text = "chart1";
             // 
             // data_chart2
             // 
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.AxisX.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.AxisY.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
-            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
-            chartArea4.Name = "ChartArea1";
-            this.data_chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.data_chart2.Legends.Add(legend4);
+            chartArea10.AxisX.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea10.AxisX.LineColor = System.Drawing.Color.LightGray;
+            chartArea10.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea10.AxisX.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea10.AxisY.LabelStyle.ForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea10.AxisY.LineColor = System.Drawing.Color.LightGray;
+            chartArea10.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea10.AxisY.MajorTickMark.LineColor = System.Drawing.Color.LightGray;
+            chartArea10.AxisY.TitleForeColor = System.Drawing.Color.DodgerBlue;
+            chartArea10.Name = "ChartArea1";
+            this.data_chart2.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.data_chart2.Legends.Add(legend10);
             this.data_chart2.Location = new System.Drawing.Point(1234, 609);
             this.data_chart2.Name = "data_chart2";
-            series4.BorderWidth = 3;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Color = System.Drawing.Color.DodgerBlue;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.data_chart2.Series.Add(series4);
+            series10.BorderWidth = 3;
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series10.Color = System.Drawing.Color.DodgerBlue;
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.data_chart2.Series.Add(series10);
             this.data_chart2.Size = new System.Drawing.Size(650, 250);
             this.data_chart2.TabIndex = 31;
             this.data_chart2.Text = "chart2";
@@ -465,17 +465,6 @@
             this.panel3.Size = new System.Drawing.Size(600, 600);
             this.panel3.TabIndex = 33;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(278, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 24);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Map";
-            // 
             // map
             // 
             this.map.Bearing = 0F;
@@ -501,6 +490,17 @@
             this.map.Size = new System.Drawing.Size(552, 518);
             this.map.TabIndex = 6;
             this.map.Zoom = 0D;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(285, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 24);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Map";
             // 
             // Form1
             // 

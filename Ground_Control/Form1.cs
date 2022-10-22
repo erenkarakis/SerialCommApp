@@ -8,6 +8,8 @@ using Ground_Control.Classes;
 using System.Linq;
 using GMap.NET.MapProviders;
 using GMap.NET;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
 
 namespace Ground_Control
 {
@@ -294,15 +296,27 @@ namespace Ground_Control
             map.DragButton = MouseButtons.Left;
             lat = 39.925262;
             longt = 32.836912;
-            map.Position = new PointLatLng(lat, longt);
+            UpdatePositionOnMap(lat, longt);
             map.MinZoom = 5;
             map.MaxZoom = 100;
             map.Zoom = 18;
         }
 
-        public void UpdatePositionOnMap(double latitude, double longtitude)
+        public void UpdatePositionOnMap(double latitude, double longitude)
         {
-            map.Position = new PointLatLng(latitude, longtitude);
+            map.Position = new PointLatLng(latitude, longitude);
+            PointLatLng point = new PointLatLng(latitude, longitude);
+            map.Overlays.Clear(); //If you delete this row previous markers won't be deleted.
+            map.Refresh(); //This can be useless idk :D
+            AddMarkerToMap(point);
+        }
+
+        public void AddMarkerToMap(PointLatLng point)
+        {
+            GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_dot);
+            GMapOverlay overlay = new GMapOverlay("overlay");
+            overlay.Markers.Add(marker);
+            map.Overlays.Add(overlay);
         }
     }
 }
